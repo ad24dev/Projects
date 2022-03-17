@@ -104,7 +104,6 @@ form {
 }
 
 label { 
-    display: flex;
     text-align: center;
     font-weight: 800;
     margin-bottom: 0.35rem;
@@ -118,8 +117,18 @@ label {
 }
 
 .form-fields > p {
+    
     font-weight: 800;
     margin-bottom: 0.50rem; 
+}
+
+.form-fields > input {
+    display: flex;
+    
+} 
+
+.radio {
+    display: flex;
 }
 
 .clue {
