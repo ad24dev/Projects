@@ -131,6 +131,10 @@ label {
     display: flex;
 }
 
+.checkbox {
+    display: flex;
+}
+
 .clue {
     display: contents;
     margin-left: 0.2rem;
