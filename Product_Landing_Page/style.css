@@ -7,6 +7,11 @@
 }
 
 .heading-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1280px;
   position: relative;
 }
 
@@ -24,7 +29,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background-color: #eee;
 }
 
@@ -33,18 +38,36 @@ header {
 }
 
 nav {
+  min-height: 80px;
   font-weight: 400;
 }
 
-img {
-  width: 500px;
+.logo > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  margin-left: -140px;
 }
 
 nav > ul {
-  width: 35vw;
+  width: 25vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav ul li {
+  display: block;
+  padding: 0;
+}
+
+nav ul li a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
 }
 
 .container {
@@ -61,6 +84,26 @@ form {
   margin-top: 1rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.container > h2 {
+  margin-top: -2rem;
+  margin-right: 5rem;
+  font-weight: 900;
+}
+
+.container input[type="email"] {
+  padding: 5px;
+  max-width: 275px;
+  width: 100%;
+}
+
 .container input[type="submit"] {
   max-width: 8rem;
   width: 100%;
@@ -68,14 +111,16 @@ form {
   margin: 1.2rem 0;
   border: 0;
   background-color: #f1c40f;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 5rem;
+  border-radius: 1rem;
 }
 
 .page-contents {
-  margin: 5rem 15rem 5rem 15rem;
-}
-
-#features {
-  margin-top: 6rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  margin-left: 6rem;
 }
 
 .grid {
@@ -86,9 +131,8 @@ form {
 #features .icon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 2rem;
-  width: 20vw;
+  height: 5rem;
+  width: 15vw;
   color: #ff8c00;
 }
 
@@ -96,7 +140,43 @@ form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 4rem;
-  width: 80vw;
+  height: 5.3rem;
+  width: 160vw;
   padding: 5px;
+}
+
+p {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+/* -----How it works Section------ */
+
+iframe {
+  max-width: 560px;
+  width: 100%;
+  margin-left: 15rem;
+  margin-bottom: 2rem;
+}
+
+/* -------Pricing Section---------- */
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% / 3);
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
