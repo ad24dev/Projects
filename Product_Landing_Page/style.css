@@ -33,21 +33,62 @@ header {
   background-color: #eee;
 }
 
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
 .logo {
   width: 60vw;
 }
 
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
 nav {
+  display: flex;
+  flex-grow: 1;
   min-height: 80px;
   font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  nav li {
+    padding-bottom: 5px;
+  }
 }
 
 .logo > img {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   max-width: 300px;
-  margin-left: -140px;
+  margin-left: -5px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
 }
 
 nav > ul {
@@ -55,8 +96,13 @@ nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  text-align: center;
   margin-top: 2rem;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
 }
 
 nav ul li {
@@ -93,9 +139,10 @@ form {
 }
 
 .container > h2 {
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
   margin-right: 5rem;
   font-weight: 900;
+  word-wrap: break-word;
 }
 
 .container input[type="email"] {
@@ -117,6 +164,12 @@ form {
   border-radius: 1rem;
 }
 
+@media (max-width: 650px) {
+  .container {
+    margin-top: 120px;
+  }
+}
+
 .page-contents {
   margin-top: 2rem;
   padding: 2rem;
@@ -136,13 +189,35 @@ form {
   color: #ff8c00;
 }
 
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
 #features .desc {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 5.3rem;
+  max-width: 100%;
   width: 160vw;
   padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
 }
 
 p {
@@ -155,11 +230,16 @@ h2 {
 
 /* -----How it works Section------ */
 
-iframe {
+#how-it-works {
   max-width: 560px;
   width: 100%;
   margin-left: 15rem;
   margin-bottom: 2rem;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
 }
 
 /* -------Pricing Section---------- */
@@ -199,6 +279,19 @@ iframe {
 
 li {
   list-style: none;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 }
 
 .btn {
